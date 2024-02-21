@@ -1,0 +1,93 @@
+.nav {
+    flex: 0 0 230px;
+    overflow: hidden;
+    transition: flex 1s ease;
+    box-shadow: 7px 0px 10px -5px var(--color-thertiary);
+
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        flex: 0 0 80px;
+        width: 100%;
+        display: flex;
+        padding: 0 0 0 10px;
+        align-items: center;
+        border-bottom: 1px solid var(--color-thertiary);
+        &-title{
+            font-weight: 300;
+            font-size: var(--font-primary);
+        }
+
+    }
+
+    .side-nav {
+        flex: 1;
+        font-size: var(--font-text);
+        list-style: none;
+        margin-top: 3.5rem;
+
+        &__item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+
+        &__item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: var(--color-secondary);
+            transform: scaleY(0);
+            transition: transform .2s,
+                width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                background-color .1s;
+        }
+
+        &__item:hover::before,
+        &__item--active::before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        &__item:active::before {
+            background-color: var(--color-secondary);
+        }
+    
+        &__link:link,
+        &__link:visited {
+            color: var(--color-text-1);
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            padding: 1.5rem 3rem;
+            position: relative;
+            z-index: 10;
+    
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            margin-right: 2rem;
+            fill: currentColor;
+        }
+    }
+
+    
+
+    &__footer {
+        flex: 0 0 80px;
+        // border: 1px solid red;
+    }
+
+}
+
+

@@ -1,0 +1,148 @@
+/////////////////////
+// BUTTONS
+////////////////////
+.btn {
+    position: relative;
+
+    &-text {
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        // &:hover{
+        //     background-color: transparent;
+        // }
+    }
+
+    &-table-primary {
+        background-color: transparent;
+        border: 1px solid var(--color-claro);
+        flex: 0 0 35px;
+        cursor: pointer;
+        padding: 3px 6px;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-claro);
+        }
+
+        &.modal {
+            border: 1px solid var(--color-secondary);
+
+            .icon {
+                fill: var(--color-secondary);
+            }
+        }
+    }
+
+    &-table-secondary {
+        padding: 3px 0px;
+        width: 80px;
+        border: 1px solid var(--color-claro);
+
+        &--active {
+            background-color: var(--color-claro);
+            border: 1px solid var(--color-secondary);
+            color: var(--color-dark);
+        }
+
+        &--inactive {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+    }
+
+    &-circle {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: none;
+        background-color: var(--color-claro);
+        cursor: pointer;
+    }
+
+    &-block {
+        cursor: progress;
+        border: 1px solid var(--color-grey-light) !important;
+        background-color: var(--color-grey-light) !important;
+        color: var(--color-dark) !important;
+        .icon{
+            fill: var(--color-dark);
+        }
+        // overflow: hidden;
+
+        // TODO for spinner
+        // &::after {
+        //     content: '';
+        //     border: 2px solid rgb(10, 238, 219);
+        //     border-left-color: transparent;
+        //     border-radius: 50%;
+        //     width: 10px;
+        //     height: 10px;
+        //     top: 5px;
+        //     position: absolute;
+        //     animation: spin 1s linear infinite;
+        // }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &-header {
+        background-color: var(--color-secondary);
+        border: 1px solid var(--color-secondary);
+        color: var(--color-claro);
+        font-size: var(--font-thertiary);
+        padding: 5px 20px;
+        margin-left: 25px;
+    }
+
+    &-table-state {
+        padding: 3px 0px;
+        width: 80px;
+
+        &--active {
+            background-color: var(--color-secondary);
+            border: 1px solid var(--color-secondary);
+            color: var(--color-claro);
+        }
+
+        &--inactive {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+    }
+
+    &-card{
+        border: none;
+        cursor: pointer;
+        border-top: 1px solid var(--color-secondary);
+        background-color: transparent;
+        color: var(--color-claro);
+        &:hover{
+            background-color: var(--color-secondary);
+        }
+    }
+
+
+}
+
+
+.graph{
+    width: 400px;
+}

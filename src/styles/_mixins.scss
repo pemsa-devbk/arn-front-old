@@ -1,0 +1,24 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == width-hd {
+        @media only screen and (max-width: 80em) { @content };     //1280px
+    }
+    @if $breakpoint == width-med {
+        @media only screen and (max-width: 93.75em) { @content };    //1500px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+@mixin alt($breakpoint) {
+    @if $breakpoint == min-heigh{
+        @media only screen and (max-height: 45em) {
+            @content
+        };
+    }
+    @if $breakpoint == max-heigh {
+        @media only screen and (max-height: 56.25em) {
+            @content
+        };
+    }
+}
